@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Selected AI, machine-learning, Python and web projects by creative technologist MD Tahmid Ahnaf.">
+  <meta property="og:title" content="Work — MD Tahmid Ahnaf">
+  <meta property="og:description" content="Machine-learning experiments and expressive web builds, presented as living case files.">
+  <meta property="og:image" content="https://tahmidahnaf.com/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Work — MD Tahmid Ahnaf</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="work">
+  <a class="skip-link" href="#main">Skip to projects</a>
+
+  <div class="loader" id="loader" role="status" aria-label="Drawing the portfolio">
+    <canvas class="loader-canvas" id="loaderCanvas" aria-hidden="true"></canvas>
+    <div class="loader-copy"><span class="micro">ARTWORK 01 / THE LAB</span><p class="loader-word" aria-hidden="true"><span>MAKE</span><span>TEST</span><span>SHIP</span></p><div class="loader-meter"><i id="loaderMeter"></i></div><div class="loader-meta"><span id="loaderStatus">Opening the case files</span><b id="loaderCount">00</b></div></div>
+    <button class="loader-skip" id="loaderSkip" type="button">Skip intro</button>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-nav" id="siteNav">
+    <a class="brand magnetic" href="index.html" aria-label="Tahmid Ahnaf home"><span>TA</span><i></i></a>
+    <p class="nav-status"><span></span> Work / Selected builds</p>
+    <button class="menu-toggle magnetic" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuPanel"><span>Index</span><i></i><i></i></button>
+  </header>
+  <div class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="menu-ghost" aria-hidden="true">WORK</div>
+    <nav aria-label="Primary navigation">
+      <a href="index.html"><sup>00</sup><span>Entrance</span><em>Enter the signal</em></a>
+      <a href="work.html" aria-current="page"><sup>01</sup><span>Work</span><em>ML / AI / Web</em></a>
+      <a href="story.html"><sup>02</sup><span>Story</span><em>Experience / Archive</em></a>
+      <a href="notebook.html"><sup>03</sup><span>Notebook</span><em>Thoughts / Personality</em></a>
+    </nav>
+  </div>
+  <div class="route-wipe" aria-hidden="true"><span>TURNING THE PAGE</span></div>
+
+  <main id="main">
+    <header class="page-hero work-hero">
+      <p class="page-number micro">01 / THE LAB</p>
+      <h1><span>SEL</span><span class="outline">ECTED</span><br><em>WORK</em></h1>
+      <p class="page-intro">Experiments where models, interfaces and human questions collide. Some polished. Some still lab notes. All built to learn something real.</p>
+      <div class="page-coordinate micro">PYTHON × ML × NLP × WEB<br>DHAKA / AVAILABLE WORLDWIDE</div>
+      <div class="code-sketch" aria-hidden="true">
+        <div class="code-sketch-bar"><span>tahmid.build.js</span><i><b></b><b></b><b></b></i></div>
+        <pre><code data-code-window>const idea = "messy";
+const page = sketch(idea);
+ship(page);</code><span class="code-caret">_</span></pre>
+        <p data-code-output>✓ idea compiled with personality</p>
+      </div>
+    </header>
+
+    <section class="case-file case-cyan" id="mind-detective">
+      <div class="case-sticky">
+        <p class="micro">CASE FILE 01 / NATURAL LANGUAGE</p>
+        <h2>THE MIND<br><span>DETECTIVE</span></h2>
+        <div class="case-tags"><span>Python</span><span>DistilBERT</span><span>GoEmotions</span><span>Streamlit</span></div>
+        <a class="action primary magnetic" data-cursor="LIVE" href="https://the-mind-detective-2tu6xufnajappymjutpuid9.streamlit.app/" target="_blank" rel="noopener"><span>Try the app</span><b>↗</b></a>
+      </div>
+      <div class="case-story">
+        <div class="case-visual mind-transcript" aria-label="Editorial visualization of an emotion-classification pipeline">
+          <div class="transcript-head"><span>THE MIND DETECTIVE / LIVE TRACE</span><span>DISTILBERT × GOEMOTIONS</span></div>
+          <blockquote>“I can't stop <mark>thinking</mark> about tomorrow.”</blockquote>
+          <div class="token-raster" aria-hidden="true">
+            <span style="--heat:22%">I</span><span style="--heat:31%">CAN'T</span><span style="--heat:43%">STOP</span><span style="--heat:88%">THINKING</span><span style="--heat:19%">ABOUT</span><span style="--heat:74%">TOMORROW</span>
+          </div>
+          <div class="transcript-verdict"><small>PRIMARY EMOTION / 01</small><strong>ANTICIPATION</strong><b>0.84</b><span>CONFIDENCE</span></div>
+          <div class="transcript-margin" aria-hidden="true"><span>27 labels inspected</span><span>06 tokens weighted</span><span>01 human response</span></div>
+        </div>
+        <div class="case-prose">
+          <p class="lead">A multi-label emotion detector using the GoEmotions taxonomy and a DistilBERT-based approach, delivered as an interactive Streamlit experience.</p>
+          <p>After finishing a machine-learning course, I wanted to go deeper than the coursework. I chose GoEmotions—27 emotions plus neutral—as the foundation and trained a DistilBERT model to classify emotion from text, saving the model and tokenizer with Hugging Face’s <code>save_pretrained</code>.</p>
+          <p>The backend, from data preparation to training and model persistence, was built from scratch. AI assistance accelerated the interface. Early predictions appeared as raw labels such as <code>class_9</code>; mapping those labels back to real emotion names let the app finally speak human: <em>“You are feeling joy.”</em></p>
+          <div class="process-strip"><span>DATA PREP</span><b>→</b><span>TRAIN</span><b>→</b><span>MAP LABELS</span><b>→</b><span>RESPOND</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-file case-orange" id="credit-score">
+      <div class="case-sticky">
+        <p class="micro">CASE FILE 02 / STRUCTURED DATA</p>
+        <h2>CREDIT<br><span>SCORE ML</span></h2>
+        <div class="case-tags"><span>Python</span><span>Feature Engineering</span><span>Ensembles</span><span>Streamlit</span></div>
+      </div>
+      <div class="case-story">
+        <div class="case-visual score-lab" aria-label="Stylized model score visualization">
+          <div class="score-ring"><strong>79.8</strong><span>BEST STACKING<br>ACCURACY / %</span></div>
+          <div class="model-bars"><span style="--v:61%">KNN</span><span style="--v:68%">SVC</span><span style="--v:73%">RF</span><span style="--v:79.8%">STACK</span></div>
+          <div class="validation-note" aria-hidden="true"><small>MODEL CHECK</small><strong>4 approaches</strong><span>Stacking selected</span></div>
+        </div>
+        <div class="case-prose">
+          <p class="lead">A large structured-data prediction project built around feature engineering, model comparison and ensemble learning.</p>
+          <p>The work tested multiple approaches against the same problem, then combined their useful behavior through stacking. The best stacking result reached approximately <strong>0.798 accuracy</strong>, with a Streamlit front end turning the experiment into an interface people can actually use.</p>
+          <p>Beyond a single score, the case demonstrates the full working loop: explore the data, transform the signal, train competing models, evaluate honestly, and give the result a usable surface.</p>
+          <div class="process-strip"><span>EDA</span><b>→</b><span>FEATURES</span><b>→</b><span>ENSEMBLE</span><b>→</b><span>STREAMLIT</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-file case-violet" id="movie-recommender">
+      <div class="case-sticky">
+        <p class="micro">CASE FILE 03 / RECOMMENDATION</p>
+        <h2>MOVIE<br><span>RECOMMENDER</span></h2>
+        <div class="case-tags"><span>TF-IDF</span><span>User-item kNN</span><span>Random Forest</span><span>Hybrid ML</span></div>
+      </div>
+      <div class="case-story">
+        <div class="case-visual taste-engine" aria-label="Editorial visualization of the hybrid recommendation system">
+          <div class="taste-engine-head"><span>PERSONAL TASTE MODEL / PROFILE 0042</span><span>LIVE MATCH</span></div>
+          <section class="taste-profile">
+            <small>YOUR SIGNAL</small>
+            <h3>Quiet tension.<br>Strange worlds.<br>Earned endings.</h3>
+            <div><span>SCI-FI</span><span>DRAMA</span><span>MYSTERY</span><span>SLOW-BURN</span></div>
+          </section>
+          <div class="engine-scores">
+            <span><small>TF-IDF / CONTENT</small><i style="--score:81%"></i><b>.81</b></span>
+            <span><small>kNN / PEOPLE</small><i style="--score:74%"></i><b>.74</b></span>
+            <span><small>RF / RANKING</small><i style="--score:89%"></i><b>.89</b></span>
+          </div>
+          <aside class="recommendation-ticket"><small>RECOMMENDATION OUTPUT</small><strong>HYBRID<br>RANKING</strong><p>Content + behavior + model signal</p></aside>
+          <div class="taste-engine-foot"><span>CONTENT</span><b>+</b><span>BEHAVIOR</span><b>+</b><span>MODEL</span><b>→</b><span>ONE NEXT FRAME</span></div>
+        </div>
+        <div class="case-prose">
+          <p class="lead">A hybrid recommendation system combining content similarity, collaborative signals and learned methods.</p>
+          <p>TF-IDF interprets what a film is about. User-item kNN looks for patterns in taste. Random Forest methods add another predictive layer. Together they form a recommendation system that is more interesting than any one approach on its own.</p>
+          <p>The project reflects the way I prefer to build: use multiple perspectives, compare their blind spots, then design the handoff between them.</p>
+          <div class="process-strip"><span>CONTENT</span><b>+</b><span>BEHAVIOR</span><b>+</b><span>MODEL</span><b>→</b><span>RECOMMEND</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="small-builds" aria-labelledby="moreBuilds">
+      <div class="section-topline"><p class="micro">MORE EXPERIMENTS / STILL IN MOTION</p><p>Smaller builds, same curiosity.</p></div>
+      <h2 class="mega-title" id="moreBuilds">THE LAB<br><span>NEVER CLOSES.</span></h2>
+      <div class="build-list">
+        <a href="https://github.com/Ta-Ahnaf/pima-diabetes-app" target="_blank" rel="noopener" data-cursor="REPO"><sup>04</sup><h3>Pima Diabetes App</h3><p>Flask prediction app using the Pima Indians Diabetes Dataset and health metrics such as glucose, blood pressure, BMI and age.</p><b>↗</b></a>
+        <a href="https://github.com/Ta-Ahnaf?tab=repositories" target="_blank" rel="noopener" data-cursor="GITHUB"><sup>05</sup><h3>Other Experiments</h3><p>Boosting-based cancer classifier, cancer regression model, bank management system and KNN walkthroughs.</p><b>↗</b></a>
+      </div>
+    </section>
+
+    <section class="ai-statement">
+      <p class="micro">HOW I WORK WITH AI / NO MAGIC WAND</p>
+      <h2>FASTER<br>EXPERIMENTS.<br><em>HUMAN</em><br>JUDGMENT.</h2>
+      <p>I use generative AI as a creative and development accelerator: exploring concepts, prototyping interfaces, iterating visual directions, debugging and supporting implementation. The goal is not “AI-generated for the sake of AI”; it is faster experimentation paired with technical judgment and a deliberate final experience.</p>
+      <div class="ai-ticker" aria-hidden="true"><span>PROMPT / PROTOTYPE / QUESTION / TEST / BREAK / DEBUG / REFINE / SHIP /</span><span>PROMPT / PROTOTYPE / QUESTION / TEST / BREAK / DEBUG / REFINE / SHIP /</span></div>
+    </section>
+
+    <section class="next-page next-story">
+      <p class="micro">NEXT ROOM / THE HUMAN LAYER</p>
+      <a href="story.html" data-cursor="NEXT"><span>STORY</span><i>↗</i></a>
+    </section>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div class="footer-name">TAHMID<br>AHNAF</div>
+    <div class="footer-columns">
+      <div><span class="micro">GO SOMEWHERE</span><a href="index.html">Entrance ↗</a><a href="story.html">Story ↗</a><a href="notebook.html">Notebook ↗</a></div>
+      <div><span class="micro">GO EXTERNAL</span><a href="https://github.com/Ta-Ahnaf" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.instagram.com/_ta_arnob_/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://x.com/TAHMIDAHNAFARN1" target="_blank" rel="noopener">X ↗</a></div>
+      <div><span class="micro">KEEP THE FILE</span><a href="assets/documents/Tahmid_Ahnaf_Premium_Interactive_CV.pdf" download>Download CV ↓</a><a href="mailto:tahmid.ahnaf.arnob@gmail.com">Email ↗</a><button class="dedication-trigger" type="button" data-dedication>Margin note ✦</button></div>
+    </div>
+    <p class="footer-legal">© 2026 MD Tahmid Ahnaf. Built as a living proof of range.</p>
+  </footer>
+  <dialog class="dedication" id="dedication"><button type="button" aria-label="Close dedication" data-close-dedication>×</button><p class="micro">A QUIET LINE IN THE MARGIN</p><blockquote>This sketch theme is a small dedication to Arju Fupi, Afsana Fupi and Annie Fupi. I grew up watching them draw, and they were so good at it that they made me fall in love with sketching. I was always bad at sketching myself—so I made a website instead.</blockquote></dialog>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
